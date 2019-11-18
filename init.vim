@@ -14,6 +14,8 @@ Plug 'junegunn/goyo.vim'
 
 " deopendency autocomplete
 Plug 'zchee/deoplete-jedi'
+" using tab for autocompletions
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 
 " autopair quotes and brackets
 Plug 'jiangmiao/auto-pairs'
