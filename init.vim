@@ -32,7 +32,7 @@ Plug 'joshdick/onedark.vim'
 call plug#end()
 
 " setting neovim properties
-set nu
+set number
 set tabstop=4 shiftwidth=4 expandtab
 syntax on
 
@@ -41,3 +41,7 @@ color onedark
 let g:lightline = {
 	\ 'colorscheme': 'onedark',
 	\}
+let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
+let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'NONE' ] ]
+let s:palette.inactive.middle = s:palette.normal.middle
+let s:palette.tabline.middle = s:palette.normal.middle
