@@ -38,6 +38,9 @@ syntax on
 
 " set colorscheme
 color onedark
+" transparent background
+hi Normal guibg=NONE ctermbg=NONE
+
 let g:lightline = {
 	\ 'colorscheme': 'onedark',
 	\}
