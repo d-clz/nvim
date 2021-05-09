@@ -29,6 +29,11 @@ Plug 'itchyny/lightline.vim'
 " Onedark theme
 Plug 'joshdick/onedark.vim'
 
+" iawriter
+Plug 'junegunn/limelight.vim'
+Plug 'reedes/vim-colors-pencil'
+Plug 'subnut/vim-iawriter'
+
 call plug#end()
 
 " setting neovim properties
@@ -48,3 +53,6 @@ let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
 let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'NONE' ] ]
 let s:palette.inactive.middle = s:palette.normal.middle
 let s:palette.tabline.middle = s:palette.normal.middle
+
+" iawriter config
+let g:iawriter_force_defaults = 1
