@@ -33,6 +33,7 @@ Plug 'joshdick/onedark.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'reedes/vim-colors-pencil'
 Plug 'subnut/vim-iawriter'
+Plug 'terryma/vim-multiple-cursors'
 
 call plug#end()
 
