@@ -6,8 +6,38 @@ local wo = vim.wo
 local g = vim.g
 
 -- === Colors & Rendering ===
-o.termguicolors = true
-o.background = "dark"
+-- core/ui.lua
+
+local transparent_groups = {
+  "Normal",
+  "NormalNC",
+  "SignColumn",
+  "EndOfBuffer",
+  "MsgArea",
+  "NormalFloat",
+  "FloatBorder",
+  "StatusLine",
+  "StatusLineNC",
+  "WinSeparator",
+  "VertSplit",
+}
+
+local function set_transparent()
+  for _, group in ipairs(transparent_groups) do
+    vim.api.nvim_set_hl(0, group, { bg = "none" })
+  end
+end
+
+-- Apply immediately (for early UI)
+set_transparent()
+
+-- Re-apply AFTER any colorscheme loads
+vim.api.nvim_create_autocmd("ColorScheme", {
+  callback = set_transparent,
+})
+
+-- o.termguicolors = true
+-- o.background = "dark"
 
 -- === Statusline / Command UI ===
 o.laststatus = 3          -- global statusline

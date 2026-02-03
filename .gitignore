@@ -1,0 +1,16 @@
+# Neovim runtime
+/.local/
+/.cache/
+
+# OS noise
+.DS_Store
+Thumbs.db
+
+# Swap / backup
+*.swp
+*.swo
+*~
+
+# Session files (optional)
+Session.vim
+
