@@ -18,13 +18,6 @@ return {
         colorscheme = "onedark",
       }
 
-      -- Transparent middle (same trick you used)
-      vim.cmd([[
-        let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
-        let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'NONE' ] ]
-        let s:palette.inactive.middle = s:palette.normal.middle
-        let s:palette.tabline.middle = s:palette.normal.middle
-      ]])
     end,
   },
 
@@ -50,7 +43,7 @@ return {
 
   -- === Editor helpers ===
   { "junegunn/vim-easy-align", keys = { "ga" } },
-  { "jiangmiao/auto-pairs", event = "InsertEnter" },
+  { "jiangmiao/auto-pairs", event = "InsertEnter", lazy = false },
   { "terryma/vim-multiple-cursors" },
 }
 
